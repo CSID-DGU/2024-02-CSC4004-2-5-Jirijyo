@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>업로드된 이미지</title>
+  <link rel="stylesheet" href="App.css">
+</head>
+
+<body>
+  <header>
+    <h1>업로드된 이미지</h1>
+    <p>아래에서 업로드한 이미지를 확인하고 저장할 수 있습니다.</p>
+  </header>
+
+  <main class="image-container" id="uploadedImages"></main>
+
+  <script>
+    fetch('/get-uploaded-images')
+      .then(response => response.json())
+      .then(images => {
+        const container = document.getElementById('uploadedImages');
+        images.forEach(image => {
+          const imgWrapper = document.createElement('div');
+          imgWrapper.style.display = 'inline-block';
+          imgWrapper.style.margin = '10px';
+          imgWrapper.style.textAlign = 'center';
+
+          // 이미지 생성
+          const img = document.createElement('img');
+          img.src = image.url; // 서버에서 제공하는 이미지 URL
+          img.alt = '업로드된 이미지';
+          img.style.width = '200px';
+          img.style.border = '1px solid #ddd';
+          img.style.borderRadius = '4px';
+
+          // 다운로드 버튼 생성
+          const downloadLink = document.createElement('a');
+          downloadLink.href = image.url; // 다운로드할 이미지 URL
+          downloadLink.download = image.name || 'downloaded_image'; // 다운로드 파일 이름 지정
+          downloadLink.textContent = '이미지 저장';
+          downloadLink.style.display = 'block';
+          downloadLink.style.marginTop = '8px';
+          downloadLink.style.color = '#007bff';
+          downloadLink.style.textDecoration = 'none';
+
+          // 요소 추가
+          imgWrapper.appendChild(img);
+          imgWrapper.appendChild(downloadLink);
+          container.appendChild(imgWrapper);
+        });
+      })
+      .catch(error => console.error('이미지 로드 실패:', error));
+  </script>
+</body>
+
+</html>
