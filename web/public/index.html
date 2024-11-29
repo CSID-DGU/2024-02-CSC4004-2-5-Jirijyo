@@ -17,8 +17,7 @@
     </div>
   </div>
   <div class="content">
-    <!-- 여기에 본문 내용이 들어갑니다 -->
-    <p> </p>
+    <p></p>
   </div>
   <div class="header">
     <h1>객체 인식 AI</h1>
@@ -27,16 +26,16 @@
 
   <div class="container">
     <form id="upload-form">
-        <label for="file-upload" class="file-label"></label>
-        <input type="file" id="file-upload" name="file" accept="image/*">
-        <button type="submit" class="upload-button">이미지 업로드</button>
+      <label for="file-upload" class="file-label">이미지 선택:</label>
+      <input type="file" id="file-upload" name="file" accept="image/*">
+      <button type="submit" class="upload-button">이미지 업로드</button>
     </form>
-</div>
+    <div id="result-container">
+      <!-- 결과 이미지가 여기에 표시됩니다 -->
+    </div>
+  </div>
 
-  <script src="App.js"></script>
+  <script src="App.js" defer></script>
 </body>
-
-</html>
-
 
 </html>
