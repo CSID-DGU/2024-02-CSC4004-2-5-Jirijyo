@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 from flask_cors import CORS
 from helpers import draw_boxes_on_image
 from yolo_utils import get_detections
@@ -6,8 +6,16 @@ from PIL import Image
 import io
 import numpy as np
 
-app = Flask(__name__)
-CORS(app)  # React와 Flask 간의 CORS 문제 해결
+app = Flask(__name__, template_folder='templates', static_folder='static')
+CORS(app)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/result')
+def result_page():
+    return render_template('result.html')
 
 @app.route('/detect-objects', methods=['POST'])
 def detect_objects():
