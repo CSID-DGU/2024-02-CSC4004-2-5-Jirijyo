@@ -30,8 +30,14 @@
       <input type="file" id="file-upload" name="file" accept="image/*">
       <button type="submit" class="upload-button">이미지 업로드</button>
     </form>
-    <div id="result-container">
-      <!-- 결과 이미지가 여기에 표시됩니다 -->
+    <div id="result-container"style="display:none;">
+      <div id="original-image-container">
+        <!-- 원본 이미지와 결과 이미지가 세로로 배열됩니다 -->
+      </div>
+      <div class="action-buttons">
+        <button id="retry-button">다시 하기</button>
+        <button id="download-button" href="#" download="result-image.png">다운로드</button>
+      </div>
     </div>
   </div>
 

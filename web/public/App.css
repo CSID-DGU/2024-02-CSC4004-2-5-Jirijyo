@@ -48,10 +48,13 @@ body {
 }
 
 .header {
-  background-color: #f8a738;
+  background: linear-gradient(to right, #f8a738, #4A64E5);
   color: white;
   padding: 85px 39.44%;
   margin-bottom: 80px;
+  width: 2000px;
+  /* 고정된 너비 */
+  text-align: center;
 }
 
 .header h1 {
