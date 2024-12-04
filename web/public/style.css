@@ -139,9 +139,9 @@ html {
     background-color: #f8a738;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 28px;
     margin-top: 20px;
     transition: background-color 0.3s ease;
   }
