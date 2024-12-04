@@ -1,0 +1,217 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nav {
+    height: 50px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10;
+  }
+  
+  .nav-items {
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-left: 10px;
+  
+  }
+  
+  body {
+    padding-top: 50px;
+    /* 네비게이션 바 높이만큼 상단 여백을 줌 */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+  
+  }
+  
+  .header {
+    background: linear-gradient(to right, #f8a738, #4A64E5);
+    color: white;
+    padding: 85px 39.44%;
+    margin-bottom: 80px;
+    width: 2000px;
+    /* 고정된 너비 */
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .header p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    gap: 20px;
+    /* 이미지와 화살표 사이 간격 */
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    /* 화살표 크기 */
+    color: #333;
+    /* 화살표 색상 */
+    font-weight: bold;
+    font-size: 3rem;
+    /* 화살표 크기 */
+    color: #333;
+    /* 화살표 색상 */
+  
+  }
+  
+  .image-row img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1.5;
+    width: 600px;
+    /* 고정된 너비 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+    text-align: center;
+    padding: 10px;
+    /* 텍스트 주변 여백 */
+    color: #333;
+  }
+  
+  
+  a {
+    /*text-decoration: none;
+    */
+    /* 밑줄 제거 */
+    color: inherit;
+    /* 텍스트 색상 상속 */
+  }
+  
+  .divider {
+    border-bottom: 6px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  a.test-button {
+    text-decoration: underline;
+    display: inline-block;
+    background-color: #f8a738;
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 28px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .test-button:hover {
+    background-color: #d0762e;
+  }
+  
+  .team-section {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .team-header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .team p {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member .photo {
+  
+    background-color: #ddd;
+    border-radius: 60%;
+    margin: 0 auto 10px;
+    /* 원형 처리 */
+    overflow: hidden;
+    /* 원형 외부로 삐져나온 이미지 숨김 */
+    display: flex;
+    /* 자식 요소를 중앙에 정렬 */
+    align-items: center;
+    /* 세로 정렬 */
+    justify-content: center;
+    /* 가로 정렬 */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .team-member .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-member .name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .team-member .role {
+    font-size: 12px;
+    color: #666;
+  }
