@@ -42,8 +42,16 @@
       <input type="file" id="file-upload" name="file" accept="image/*">
       <button type="submit" class="upload-button">이미지 업로드</button>
     </form>
-    <div id="result-container">
-      <!-- 결과 이미지가 여기에 표시됩니다 -->
+    <div class="image-column">
+      <div class="image-comparison">
+        <div id="original-container" class="image-box">
+          <!-- 업로드된 원본 이미지가 여기에 표시됩니다 -->
+        </div>
+        <div id="result-container" class="image-box">
+          <!-- 처리된 결과 이미지가 여기에 표시됩니다 -->
+        </div>
+      </div>
+      
     </div>
   </div>
 
