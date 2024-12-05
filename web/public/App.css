@@ -48,10 +48,13 @@ body {
 }
 
 .header {
-  background-color: #f8a738;
+  background: linear-gradient(to right, #f8a738, #4A64E5);
   color: white;
   padding: 85px 39.44%;
   margin-bottom: 80px;
+  width: 2000px;
+  /* 고정된 너비 */
+  text-align: center;
 }
 
 .header h1 {
@@ -72,6 +75,52 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  /* 세로 중앙 정렬 */
+  justify-content: center;
+  /* 가로 중앙 정렬 */
+  gap: 20px;
+  /* 이미지와 화살표 사이 간격 */
+}
+
+.arrow {
+  font-size: 2rem;
+  /* 화살표 크기 */
+  color: #333;
+  /* 화살표 색상 */
+  font-weight: bold;
+  font-size: 3rem;
+  /* 화살표 크기 */
+  color: #333;
+  /* 화살표 색상 */
+
+}
+
+.image-row img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  margin-bottom: 80px;
+  font-size: 24px;
+  line-height: 1.5;
+  width: 600px;
+  /* 고정된 너비 */
+  margin: 0 auto;
+  /* 중앙 정렬 */
+  text-align: center;
+  padding: 50px;
+  /* 텍스트 주변 여백 */
+  color: #333;
+}
 
 #file-upload {
   display: block;
@@ -97,4 +146,121 @@ body {
 
 .upload-button:hover {
   background-color: #e07828;
+}
+
+#original-image-container,
+#result-image-container {
+  display: inline-block;
+  width: 48%; /* 각 이미지를 50%의 너비로 설정하여 가로 배치 */
+  text-align: center;
+  margin-top: 2%;
+}
+#result-image-container {
+  margin-right: 0; /* 마지막 이미지에는 간격을 두지 않도록 설정 */
+}
+#original-image,
+#result-image {
+  max-width: 100%; /* 이미지가 부모 컨테이너를 넘지 않도록 설정 */
+  max-height: 300px; /* 이미지 높이 제한 */
+  width: auto; /* 원본 이미지 비율 유지 */
+  height: auto; /* 원본 이미지 비율 유지 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+#result-container {
+  display: flex;
+  justify-content: space-between; /* 이미지를 양쪽으로 배치 */
+  gap: 70px; /* 두 이미지 간의 간격 */
+  flex-wrap: wrap; /* 화면이 좁아지면 자동으로 줄 바꿈 */
+  align-items: center;
+  max-width: 100%;
+  margin-top: 20px;
+}
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#retry-button,
+#download-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+#retry-button:hover,
+#download-button:hover {
+  background-color: #0056b3;
+}
+.team-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.team-header {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.team p {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member .photo {
+
+  background-color: #ddd;
+  border-radius: 60%;
+  margin: 0 auto 10px;
+  /* 원형 처리 */
+  overflow: hidden;
+  /* 원형 외부로 삐져나온 이미지 숨김 */
+  display: flex;
+  /* 자식 요소를 중앙에 정렬 */
+  align-items: center;
+  /* 세로 정렬 */
+  justify-content: center;
+  /* 가로 정렬 */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.team-member .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member .name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-member .role {
+  font-size: 12px;
+  color: #666;
 }
