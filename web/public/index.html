@@ -24,18 +24,80 @@
     <p>저조도 환경에서 객체 인식을 해보세요.</p>
   </div>
 
+  <div class="image-row">
+    <img src="original.jpg" alt="원본 이미지">
+    <div class="arrow">→</div>
+    <img src="result_extreme.jpg" alt="결과 이미지 1">
+    <img src="result_moderate.jpg" alt="결과 이미지 2">
+    <img src="result_severe.jpg" alt="결과 이미지 3">
+  </div>
+  <div class="description">
+    <p>저희는 원본 CCTV 이미지를</p>
+    <p>다양한 저조도 이미지로 전처리하여 학습시켰습니다.</p>
+  </div>
+
+  <div class="image-row">
+    <img src="original.jpg" alt="원본 이미지">
+    <div class="arrow">→</div>
+    <img src="result.jpg" alt="결과 이미지 1">
+  </div>
+  <div class="description">
+    <p>EnlightenGan 모델을 사용하여 저조도를 개선하고</p>
+    <p>개선된 이미지를 YOLO 모델로 학습하여 새로운 가중치 생성 및 사람 객체만 탐지합니다.</p>
+  </div>
+
+  <h2 class="team-header">테스트 해보기</h2>
+
   <div class="container">
     <form id="upload-form">
       <label for="file-upload" class="file-label">이미지 선택:</label>
       <input type="file" id="file-upload" name="file" accept="image/*">
       <button type="submit" class="upload-button">이미지 업로드</button>
     </form>
-    <div id="result-container">
-      <!-- 결과 이미지가 여기에 표시됩니다 -->
+    <div class="image-column">
+      <div class="image-comparison">
+        <div id="original-container" class="image-box">
+          <!-- 업로드된 원본 이미지가 여기에 표시됩니다 -->
+        </div>
+        <div id="result-container" class="image-box">
+          <!-- 처리된 결과 이미지가 여기에 표시됩니다 -->
+        </div>
+      </div>
+      
     </div>
   </div>
 
-  <script src="App.js" defer></script>
+  <div class="team-section">
+    <h2 class="team-header">개발진</h2>
+    <div class="team">
+      <div class="team-member">
+        <div class="photo"><img src="Yun.jpg" alt="팀원 1"></div>
+        <div class="name">윤여찬</div>
+        <div class="class">2021112646</div>
+        <div class="role">모델 구현</div>
+        <div class="role2">조장</div>
+      </div>
+      <div class="team-member">
+        <div class="photo"><img src="kim.jpg" alt="팀원 2"></div>
+        <div class="name">김윤지</div>
+        <div class="class">2022113147</div>
+        <div class="role">모델 구현</div>
+      </div>
+      <div class="team-member">
+        <div class="photo"><img src="Lee.jpg" alt="팀원 3"></div>
+        <div class="name">이용우</div>
+        <div class="class">2021112646</div>
+        <div class="role">백엔드</div>
+      </div>
+      <div class="team-member">
+        <div class="photo"><img src="Baek.jpg" alt="팀원 4"></div>
+        <div class="name">백민경</div>
+        <div class="class">202111948</div>
+        <div class="role">프론트엔드</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <script src="App.js" defer></script>
 </body>
 
 </html>

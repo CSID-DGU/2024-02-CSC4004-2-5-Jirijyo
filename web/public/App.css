@@ -48,10 +48,13 @@ body {
 }
 
 .header {
-  background-color: #f8a738;
+  background: linear-gradient(to right, #f8a738, #4A64E5);
   color: white;
   padding: 85px 39.44%;
   margin-bottom: 80px;
+  width: 2000px;
+  /* 고정된 너비 */
+  text-align: center;
 }
 
 .header h1 {
@@ -65,13 +68,59 @@ body {
 }
 .container {
   background-color: white;
-  max-width: 500px;
+  max-width: auto;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  /* 세로 중앙 정렬 */
+  justify-content: center;
+  /* 가로 중앙 정렬 */
+  gap: 20px;
+  /* 이미지와 화살표 사이 간격 */
+}
+
+.arrow {
+  font-size: 2rem;
+  /* 화살표 크기 */
+  color: #333;
+  /* 화살표 색상 */
+  font-weight: bold;
+  font-size: 3rem;
+  /* 화살표 크기 */
+  color: #333;
+  /* 화살표 색상 */
+
+}
+
+.image-row img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  margin-bottom: 80px;
+  font-size: 24px;
+  line-height: 1.5;
+  width: auto;
+  /* 고정된 너비 */
+  margin: 0 auto;
+  /* 중앙 정렬 */
+  text-align: center;
+  padding: 50px;
+  /* 텍스트 주변 여백 */
+  color: #333;
+}
 
 #file-upload {
   display: block;
@@ -97,4 +146,153 @@ body {
 
 .upload-button:hover {
   background-color: #e07828;
+}
+
+#original-image-container,
+#result-image-container {
+  display: inline-block;
+  width: 40%; /* 각 이미지를 50%의 너비로 설정하여 가로 배치 */
+  text-align: center;
+  margin-top: 2%;
+}
+
+#original-image,
+#result-image {
+  max-width: auto; /* 이미지가 부모 컨테이너를 넘지 않도록 설정 */
+  max-height: 300px; /* 이미지 높이 제한 */
+  width: 40%; 
+  height: 40%; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+#origianl-container,
+#result-container {
+  display: flex;
+  justify-content: space-between; /* 이미지를 양쪽으로 배치 */
+  gap: 70px; /* 두 이미지 간의 간격 */
+  align-items: center;
+  max-width: 100%;
+  margin-top: auto;
+}
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.image-comparison {
+  display: flex; /* 가로 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 20px; /* 원본 이미지와 결과 이미지 사이 간격 */
+  margin-top: 30px; /* 상단 여백 */
+  margin-bottom: 30px; /* 하단 여백 */
+}
+
+.image-box {
+  text-align: center; /* 텍스트와 이미지를 중앙 정렬 */
+  width: 40%; /* 각 박스의 최대 너비 */
+}
+
+.image-box img {
+  max-width: 100%; /* 이미지가 박스 너비를 넘지 않도록 설정 */
+  height: auto; /* 이미지 비율 유지 */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  display: flex; /* 가로 정렬을 유지하기 위해 Flexbox 사용 */
+  align-items: center; /* 화살표를 세로 중앙 정렬 */
+  font-size: 3rem; /* 화살표 크기 */
+  color: #333; /* 화살표 색상 */
+  font-weight: bold;
+}
+
+#retry-button,
+#download-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+#retry-button:hover,
+#download-button:hover {
+  background-color: #0056b3;
+}
+.team-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.team-header {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.team p {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member .photo {
+
+  background-color: #ddd;
+  border-radius: 60%;
+  margin: 0 auto 10px;
+  /* 원형 처리 */
+  overflow: hidden;
+  /* 원형 외부로 삐져나온 이미지 숨김 */
+  display: flex;
+  /* 자식 요소를 중앙에 정렬 */
+  align-items: center;
+  /* 세로 정렬 */
+  justify-content: center;
+  /* 가로 정렬 */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.team-member .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member .name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-member .role {
+  font-size: 12px;
+  color: #666;
+}
+
+.team-member .role2{
+  font-size: 12px;
+  color: #666;
 }
