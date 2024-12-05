@@ -16,8 +16,11 @@ def draw_boxes_on_image(image, detections):
         class_name = obj['class']
         confidence = obj['confidence']
 
+        # Draw bounding box
         draw.rectangle([x1, y1, x2, y2], outline='red', width=2)
+
+        # Add label
         label = f"{class_name} ({confidence:.2f})"
-        draw.text((x1, y1), label, fill='red', font=font)
+        draw.text((x1, y1 - 10), label, fill='red', font=font)  # Adjust position for label
 
     return image
