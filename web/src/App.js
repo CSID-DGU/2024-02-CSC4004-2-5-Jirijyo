@@ -30,21 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         body: formData,
       });
-      
+
       if (response.ok) {
         const blob = await response.blob();
-        const resultimageUrl = URL.createObjectURL(blob);
-
-        // UI 업데이트: 원본 이미지와 결과 이미지 표시
-        const originalImageUrl = URL.createObjectURL(file);
-        originalImage.src = originalImageUrl;
-        resultImage.src = resultImageUrl;
+        const imageUrl = URL.createObjectURL(blob);
 
         uploadButton.style.display = 'none';
+        // 원본 이미지와 결과 이미지 표시
+        originalImage.src = imageUrl;
+        resultImage.src = imageUrl; // 결과 이미지는 원본과 동일한 이미지 표시
+
         resultContainer.style.display = 'block';
         actionButtons.style.display = 'flex';
+
         // 다운로드 버튼 링크 설정
-        downloadButton.href = resultImageUrl;
+        downloadButton.href = imageUrl;
       } else {
         const error = await response.json();
         alert(`오류 발생: ${error.error}`);
