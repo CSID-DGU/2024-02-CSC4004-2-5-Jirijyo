@@ -1,0 +1,7 @@
+[build]
+publish = "2024-02-CSC4004-2-5-JIRIJYO"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
