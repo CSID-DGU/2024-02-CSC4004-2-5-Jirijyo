@@ -8,3 +8,4 @@
 
 
 프론트 웹사이트 : https://baekmingyeong.github.io/beakmingyeong.github.io/
+해당 프로젝트 로컬 실행 결과 : https://youtu.be/XVklEc8Z750
