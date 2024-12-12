@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 from enlighten_inference import EnlightenOnnxModel
 from PIL import Image
@@ -7,15 +7,22 @@ import numpy as np
 import cv2
 from yolo_utils import get_detections
 from helpers import draw_boxes_on_image
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../web/build", static_url_path="")
 CORS(app)  # React와 Flask 간의 CORS 문제 해결
 
 # EnlightenGAN 모델 초기화
 brightness_model = EnlightenOnnxModel()
 
+@app.route('/')
+def serve_index():
+    """React 앱의 index.html 파일 제공"""
+    return send_from_directory(app.static_folder, "index.html")
+
 @app.route('/process-image', methods=['POST'])
 def process_image():
+    """이미지 처리 API"""
     if 'image' not in request.files:
         return jsonify({"error": "이미지가 없습니다."}), 400
 
@@ -47,6 +54,12 @@ def process_image():
     except Exception as e:
         print(f"Error: {e}")  # 디버깅용 로그 출력
         return jsonify({"error": str(e)}), 500
+
+
+@app.errorhandler(404)
+def not_found(e):
+    """404 에러 발생 시 React index.html 반환"""
+    return send_from_directory(app.static_folder, "index.html")
 
 
 if __name__ == '__main__':
