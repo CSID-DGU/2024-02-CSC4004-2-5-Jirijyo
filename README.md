@@ -8,4 +8,5 @@
 
 
 프론트 웹사이트 : https://baekmingyeong.github.io/beakmingyeong.github.io/
+서버:http://172.31.7.213:5000/
 해당 프로젝트 로컬 실행 결과 : https://youtu.be/XVklEc8Z750
