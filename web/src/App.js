@@ -1,3 +1,5 @@
+const API_URL = "http://10.1.1.4:5000";
+
 document.addEventListener('DOMContentLoaded', () => {
   const uploadForm = document.getElementById('upload-form');
   const fileInput = document.getElementById('file-upload');
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.append('image', file);
     try {
       // Flask 서버에 POST 요청
-      const response = await fetch('http://127.0.0.1:5000/process-image', {
+      const response = await fetch('${API_URL}/process-image', {
         method: 'POST',
         body: formData,
       });
