@@ -73,8 +73,8 @@ flask-server에서 python app.py를 통해 서버를 열고, http 주소로 이�
 
 * 웹 배포
 
-프론트 웹사이트 : [https://baekmingyeong.github.io/beakmingyeong.github.io/](https://jirijyoai.netlify.app/)
+프론트 웹사이트 : https://jirijyoai.netlify.app
 
-서버:http://172.31.7.213:5000/
+서버 : http://172.31.7.213:5000/
 
 해당 프로젝트 로컬 실행 결과 : https://youtu.be/XVklEc8Z750
