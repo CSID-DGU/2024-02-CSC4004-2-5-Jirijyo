@@ -22,18 +22,19 @@
 4. 웹 페이지 배포
 
 ### 데이터 저조도 처리
----
+
 
 + Rogoflow Universe 플랫폼에서 제공하는 데이터셋을 이용
+
   원본 이미지 -> 밝기 감소 -> 노이즈 추가 -> 저장을 통해 데이터 전처리
 
 ### 저조도 개선 딥러닝 모델을 통한 이미지 조도 개선
----
+
 
 + 저조도 개선을 위한 모델 : Zero-DCE, EnlightenGAN, CIDNet
 
 ### 사람 객체 인식 딥러닝 모델 파인튜닝
----
+
 
 + YOLO 학습 with 저조도 개선 딥러닝 모델 성능 비교
   
@@ -42,8 +43,9 @@
 
 ### 웹 배포
 ---
-*local
+* local
 해당 레파지토리로 로컬 실행 시, git clone을 통해 enlighten GAN 을 설치해야 합니다.
+
 git 주소1 : https://github.com/KwanHoo/Enlighten-GAN_test
 
 git 주소2 : https://github.com/arsenyinfo/EnlightenGAN-inference
@@ -52,7 +54,7 @@ flask-server에서 python app.py를 통해 서버를 열고, http 주소로 이�
 
 ----------
 
-*웹 배포
+* 웹 배포
 
 프론트 웹사이트 : https://baekmingyeong.github.io/beakmingyeong.github.io/
 
