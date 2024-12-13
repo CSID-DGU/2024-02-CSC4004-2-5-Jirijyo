@@ -38,6 +38,8 @@
 + 저조도 개선을 위한 모델 : Zero-DCE, EnlightenGAN, CIDNet
   
   ![모델 비교](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%A0%80%EC%A1%B0%EB%8F%84%20%EB%AA%A8%EB%8D%B8%20%EB%B9%84%EA%B5%90.png)
+
+  3가지의 모델의 장단점은 다음과 같습니다. 해당 모델들을 사용해 YOLO 모델 학습을 하여 어떤 모델을 사용할 지 정합니다.
   
 
 ### 사람 객체 인식 딥러닝 모델 파인튜닝
@@ -45,10 +47,9 @@
 
 + YOLO 학습 with 저조도 개선 딥러닝 모델 성능 비교
   
-
-  결론 : alpha = 0.3으로 학습된 EnlightenGAN 기반 YOLO 모델의 가중치 best.pt를 최종적으로 사용하게 되었습니다.
-
-  ![성능 비교](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%84%B1%EB%8A%A5%EB%B9%84%EA%B5%90.png)
+![성능 비교](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%84%B1%EB%8A%A5%EB%B9%84%EA%B5%90.png)
+   
+   결론 : alpha = 0.3으로 학습된 EnlightenGAN 기반 YOLO 모델의 가중치 best.pt를 최종적으로 사용하게 되었습니다.
   
 
 ### 웹 배포
