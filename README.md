@@ -25,9 +25,11 @@
 ### 데이터 저조도 처리
 
 
-+ Rogoflow Universe 플랫폼에서 제공하는 데이터셋을 이용
++ Rogoflow Universe 플랫폼에서 제공하는 데이터셋을 이용했습니다.
 
-  원본 이미지 -> 밝기 감소 -> 노이즈 추가 -> 저장을 통해 데이터 전처리
+  ![전처리](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EC%B2%98%EB%A6%AC.png)
+  
+  원본 이미지 → 밝기 감소 → 노이즈 추가 → 저장을 통해 데이터 전처리
 
 
 ### 저조도 개선 딥러닝 모델을 통한 이미지 조도 개선
