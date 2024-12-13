@@ -57,6 +57,7 @@
   
 ---
 * local
+  
 해당 레파지토리로 로컬 실행 시, git clone을 통해 enlighten GAN 을 설치해야 합니다.
 
 git 주소1 : https://github.com/KwanHoo/Enlighten-GAN_test
