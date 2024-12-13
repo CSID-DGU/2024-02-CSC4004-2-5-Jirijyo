@@ -21,6 +21,7 @@
 3. 사람 객체 인식 딥러닝 모델 파인튜닝
 4. 웹 페이지 배포
 
+
 ### 데이터 저조도 처리
 
 
@@ -28,10 +29,14 @@
 
   원본 이미지 -> 밝기 감소 -> 노이즈 추가 -> 저장을 통해 데이터 전처리
 
+
 ### 저조도 개선 딥러닝 모델을 통한 이미지 조도 개선
 
 
 + 저조도 개선을 위한 모델 : Zero-DCE, EnlightenGAN, CIDNet
+  
+  ![모델 비교](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%A0%80%EC%A1%B0%EB%8F%84%20%EB%AA%A8%EB%8D%B8%20%EB%B9%84%EA%B5%90.png)
+  
 
 ### 사람 객체 인식 딥러닝 모델 파인튜닝
 
@@ -41,7 +46,15 @@
 
   결론 : alpha = 0.3으로 학습된 EnlightenGAN 기반 YOLO 모델의 가중치 best.pt를 최종적으로 사용하게 되었습니다.
 
+  ![성능 비교](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%84%B1%EB%8A%A5%EB%B9%84%EA%B5%90.png)
+  
+
 ### 웹 배포
+
+* 웹은 프로젝트 간단 소개 / 모델 테스트 / 개발진 간단 소개 로 구성되었습니다.
+
+![웹 이미지](https://github.com/CSID-DGU/2024-02-CSC4004-2-5-Jirijyo/blob/main/%EC%9B%B9%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png)
+  
 ---
 * local
 해당 레파지토리로 로컬 실행 시, git clone을 통해 enlighten GAN 을 설치해야 합니다.
@@ -52,7 +65,7 @@ git 주소2 : https://github.com/arsenyinfo/EnlightenGAN-inference
 
 flask-server에서 python app.py를 통해 서버를 열고, http 주소로 이동하여 확인이 가능합니다.
 
-----------
+---
 
 * 웹 배포
 
