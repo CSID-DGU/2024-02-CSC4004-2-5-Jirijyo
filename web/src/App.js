@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.append('image', file);
     try {
       // Flask 서버에 POST 요청
-      const response = await fetch('${API_URL}/process-image', {
+      const response = await fetch('http://10.1.1.4:5000/process-image', {
         method: 'POST',
         body: formData,
       });
